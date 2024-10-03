@@ -3,6 +3,7 @@ import Register from "./components/auth/register";
 
 import Header from "./components/header";
 import Home from "./components/home";
+import LandingPage from "./components/landing/LandingPage";
 
 import { AuthProvider } from "./contexts/authContext";
 import { useRoutes } from "react-router-dom";
@@ -11,7 +12,7 @@ function App() {
   const routesArray = [
     {
       path: "*",
-      element: <Login />,
+      element: <LandingPage />,
     },
     {
       path: "/login",
