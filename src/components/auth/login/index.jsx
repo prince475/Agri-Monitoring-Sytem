@@ -3,6 +3,8 @@ import { Navigate, Link } from 'react-router-dom'
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth'
 import { useAuth } from '../../../contexts/authContext'
 import logo from '../../../assets/kenya.png'
+import logo1 from "../../../assets/main-slider-1-1-1.jpeg"
+
 
 const Login = () => {
     const { userLoggedIn } = useAuth()
@@ -32,16 +34,17 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="w-full h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${logo1})` }}
+        >
             {userLoggedIn && (<Navigate to={'/home'} replace={true} />)}
 
             <main className="w-full h-screen flex self-center place-content-center place-items-center">
-                <div className="w-96 text-gray-600 space-y-5 p-4 shadow-xl border rounded-xl">
+                <div className="w-96 text-gray-600 space-y-2 mt-4 p-4 shadow-xl border rounded-xl bg-white">
                     <div className="text-center">
                         <div className="mt-2 flex items-center justify-center p-4 bg-gray-100 shadow-md rounded-md ">
                             <h3 className="text-black text-xl font-bold sm:text-2xl">AMS</h3>
                             <img src={logo} alt="Logo" className="w-8 h-8 ml-2" />
-
                         </div>
                     </div>
                     <form
