@@ -42,7 +42,7 @@ const Login = () => {
             <main className="w-full h-screen flex self-center place-content-center place-items-center">
                 <div className="w-96 text-gray-600 space-y-2 mt-4 p-4 shadow-xl border rounded-xl bg-white">
                     <div className="text-center">
-                        <div className="mt-2 flex items-center justify-center p-4 bg-gray-100 shadow-md rounded-md ">
+                        <div className="mt-2 flex items-center justify-center p-4 bg-gray-100 border border-gray-200 shadow-md rounded-md ">
                             <h3 className="text-black text-xl font-bold sm:text-2xl">AMS</h3>
                             <img src={logo} alt="Logo" className="w-8 h-8 ml-2" />
                         </div>
@@ -60,7 +60,7 @@ const Login = () => {
                                 autoComplete='email'
                                 required
                                 value={email} onChange={(e) => { setEmail(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
@@ -74,7 +74,8 @@ const Login = () => {
                                 autoComplete='current-password'
                                 required
                                 value={password} onChange={(e) => { setPassword(e.target.value) }}
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
+                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black
+                                 focus:border-indigo-600 shadow-sm rounded-lg transition duration-300"
                             />
                         </div>
 
